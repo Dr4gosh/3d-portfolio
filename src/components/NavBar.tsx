@@ -12,7 +12,7 @@ const NavBar = () => {
             href={"/"}
             className="text-xl font-bold text-neutral-400 transition-colors hover:text-white"
           >
-            {/* Dragos */}
+            Dragos
           </Link>
           <MobileToggle />
         </div>

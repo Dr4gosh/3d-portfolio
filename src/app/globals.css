@@ -23,6 +23,16 @@ body {
     @apply bg-gradient-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent;
   }
 
+  .orange-gradient {
+    background: #ed3b32;
+    background: linear-gradient(-90deg, #ed3b32 0%, rgba(60, 51, 80, 0) 100%);
+    background: -webkit-linear-gradient(
+      -90deg,
+      #ed3b32 0%,
+      rgba(60, 51, 80, 0) 100%
+    );
+  }
+
   .waving-hand {
     animation-name: wave-animation;
     animation-duration: 2.5s;

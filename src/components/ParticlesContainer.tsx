@@ -2,8 +2,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
-import { loadSlim } from "@tsparticles/slim";
-import { option } from "framer-motion/client";
+
 const ParticlesContainer = () => {
   const [init, setInit] = useState(false);
   // this should be run only once per application lifetime
@@ -106,7 +105,7 @@ const ParticlesContainer = () => {
   );
 
   return (
-    <div className="mt-18 translate-z-0 absolute right-0 z-10">
+    <div className="mt-18 translate-z-0 absolute right-0 z-0">
       <Particles
         id="tsparticles"
         className="mt-18"

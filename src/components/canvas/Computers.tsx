@@ -1,15 +1,10 @@
 "use client";
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import {
-  OrbitControls,
-  PerspectiveCamera,
-  Preload,
-  useGLTF,
-} from "@react-three/drei";
+import { OrbitControls, PerspectiveCamera, Preload } from "@react-three/drei";
 
 import CanvasLoader from "@/components/Loader";
-import { div } from "framer-motion/client";
+
 import { Test } from "../Test";
 
 const Computers = ({ isMobile }: { isMobile: boolean }) => {
@@ -18,7 +13,7 @@ const Computers = ({ isMobile }: { isMobile: boolean }) => {
   // const txt = "/bghero.png";
 
   return (
-    <Test isMobile={isMobile} />
+    <Test isMobile={isMobile} scale={0.5} />
     // <mesh>
     //   <hemisphereLight intensity={0.15} groundColor="black" />
     //   <spotLight
@@ -82,10 +77,10 @@ const ComputersCanvas = () => {
         <Suspense fallback={<CanvasLoader />}>
           <PerspectiveCamera makeDefault position={[-10, 0, 15]} />
           <OrbitControls
-            enableZoom={false}
+            enableZoom={true}
             enableRotate={true}
             enableDamping={true}
-            enablePan={false}
+            enablePan={true}
             maxPolarAngle={Math.PI / 2}
             minPolarAngle={Math.PI / 2}
           />

@@ -1,12 +1,16 @@
+//@ts-nocheck
 import React, { useRef } from "react";
-import { useGLTF } from "@react-three/drei";
+import { useGLTF, useTexture } from "@react-three/drei";
 
-export function Test({ isMobile, props }: { isMobile: boolean; props?: any }) {
+export function Test(props: any) {
   const { nodes, materials } = useGLTF("/pc_desk/scene.gltf");
+
+  const screenTxt = useTexture("/ss.png");
+
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, -Math.PI / 2]}>
-        <group rotation={[Math.PI / 2, 0, 0]} scale={0.008}>
+        <group rotation={[Math.PI / 2, 0, -0.25]} scale={0.008}>
           <mesh
             castShadow
             receiveShadow
@@ -2569,11 +2573,12 @@ export function Test({ isMobile, props }: { isMobile: boolean; props?: any }) {
             castShadow
             receiveShadow
             geometry={nodes.MY_SCREEN_MY_SCREEN_0.geometry}
-            material={materials["Material.074_30"]}
             position={[-136.177, 300.132, 300.405]}
             rotation={[-Math.PI / 2, 1.501, Math.PI / 2]}
             scale={[331.621, 348.065, 331.621]}
-          />
+          >
+            <meshMatcapMaterial map={screenTxt} />
+          </mesh>
           <mesh
             castShadow
             receiveShadow
@@ -6189,4 +6194,4 @@ export function Test({ isMobile, props }: { isMobile: boolean; props?: any }) {
   );
 }
 
-useGLTF.preload("/scene.gltf");
+useGLTF.preload("/pc_desk/scene.gltf");

@@ -2,8 +2,8 @@
 
 import { Moon, Sun } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { en } from "@/messages/en";
-import { ro } from "@/messages/ro";
+// import { en } from "../../messages/en";
+// import { ro } from "../../messages/ro";
 
 export default function LanguageToggle() {
   const router = useRouter();

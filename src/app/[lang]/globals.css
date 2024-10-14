@@ -11,8 +11,26 @@ body {
 }
 
 @layer utilities {
+  .c-space {
+    @apply px-5 sm:px-10;
+  }
   .text-balance {
     text-wrap: balance;
+  }
+  .orange-gradient {
+    background: #ed3b32;
+    background: linear-gradient(-90deg, #ed3b32 0%, rgba(60, 51, 80, 0) 80%);
+    background: -webkit-linear-gradient(
+      -90deg,
+      #ed3b32 0%,
+      rgba(60, 51, 80, 0) 80%
+    );
+  }
+
+  .grid-card {
+    /* background: rgba(60, 51, 80, 0); */
+    /* border: 1px solid #ed3b32; */
+    @apply orange-gradient overflow-hidden rounded-lg;
   }
 
   /* hero section */
@@ -23,14 +41,17 @@ body {
     @apply bg-gradient-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent;
   }
 
-  .orange-gradient {
-    background: #ed3b32;
-    background: linear-gradient(-90deg, #ed3b32 0%, rgba(60, 51, 80, 0) 100%);
-    background: -webkit-linear-gradient(
-      -90deg,
-      #ed3b32 0%,
-      rgba(60, 51, 80, 0) 100%
-    );
+  /* about section */
+  .grid-container {
+    @apply grid-card relative flex h-full w-full flex-col gap-5 rounded-lg border border-black-300 bg-black-200 p-4 sm:p-7;
+  }
+
+  .grid-headtext {
+    @apply mb-2 font-generalsans text-xl font-semibold text-white;
+  }
+
+  .grid-subtext {
+    @apply font-generalsans text-base text-[#afb0b6];
   }
 
   .waving-hand {

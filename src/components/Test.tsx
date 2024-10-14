@@ -10,7 +10,7 @@ export function Test(props: any) {
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, -Math.PI / 2]}>
-        <group rotation={[Math.PI / 2, 0, -0.25]} scale={0.008}>
+        <group rotation={[Math.PI / 2, 0, -0.25]} scale={0.01}>
           <mesh
             castShadow
             receiveShadow

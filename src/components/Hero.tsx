@@ -11,7 +11,10 @@ import Target from "./Target";
 import HeroCamera from "./HeroCamera";
 import ComputersCanvas from "./canvas/Computers";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
+
 const Hero = () => {
+  const t = useTranslations("HomePage");
   //   const controls = useControls("HackerRoom", {
   //     positionX: {
   //       value: 2.5,
@@ -73,7 +76,8 @@ const Hero = () => {
 
         <div>
           <h1 className="mt-2 text-4xl font-black text-white sm:text-5xl md:text-6xl">
-            Hello <span className="text-[#ed3b32]">World</span>
+            {/* Hello <span className="text-[#ed3b32]">World</span> */}
+            {t("title")}
           </h1>
           <p className="mt-2 text-xl text-white">
             Here is a 3D visuals, blabla <br className="hidden sm:block" />
